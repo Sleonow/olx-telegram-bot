@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_TOKEN = os.getenv("8042965148:AAHjoSaOopUau4CiaDEcov0uimtvGwm8Dlc")
-WEBHOOK_URL = os.getenv("https://olx-telegram-bot-qmnr.onrender.com")
+API_TOKEN = os.getenv("API_TOKEN")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 
 bot = telebot.TeleBot(API_TOKEN)
 app = Flask(__name__)
@@ -30,4 +30,5 @@ if __name__ == "__main__":
     bot.remove_webhook()
     bot.set_webhook(url=WEBHOOK_URL + "/" + API_TOKEN)
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
 
