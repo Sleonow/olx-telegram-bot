@@ -1,4 +1,3 @@
-
 import telebot
 import os
 
@@ -12,5 +11,3 @@ def start(message):
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
     bot.send_message(message.chat.id, "Напишіть, що саме вас цікавить.")
-
-bot.polling()
