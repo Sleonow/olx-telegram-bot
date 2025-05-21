@@ -1,10 +1,10 @@
 import telebot
 from flask import Flask, request
 import os
-import sys
 
-API_TOKEN = os.getenv("API_TOKEN")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")
+print("API_TOKEN =", os.getenv("API_TOKEN"))
+print("WEBHOOK_URL =", os.getenv("WEBHOOK_URL"))
+
 
 if not API_TOKEN or not WEBHOOK_URL:
     print("ERROR: Не заданы переменные окружения API_TOKEN или WEBHOOK_URL")
