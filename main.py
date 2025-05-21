@@ -1,6 +1,7 @@
 import telebot
 from flask import Flask, request
 import os
+import sys  # Добавил импорт sys
 
 API_TOKEN = os.getenv("API_TOKEN")
 WEBHOOK_URL = os.getenv("WEBHOOK_URL")
@@ -32,8 +33,3 @@ if __name__ == "__main__":
     bot.set_webhook(url=WEBHOOK_URL + "/" + API_TOKEN)
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
-    bot.send_message(message.chat.id, "Привет! Это OLX Dropshipping бот.")
-if __name__ == "__main__":
-    bot.remove_webhook()
-    bot.set_webhook(url=WEBHOOK_URL + "/" + API_TOKEN)
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
