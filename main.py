@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_TOKEN = "8042965148:AAHjoSaOopUau4CiaDEcov0uimtvGwm8Dlc"
-WEBHOOK_URL = os.getenv("https://github.com/Sleonow/olx-telegram-bot.git")
+WEBHOOK_URL = os.getenv("https://olx-telegram-bot-qmnr.onrender.com")
 
 bot = telebot.TeleBot(API_TOKEN)
 app = Flask(__name__)
